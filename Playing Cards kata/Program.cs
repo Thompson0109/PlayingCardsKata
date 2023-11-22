@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Playing_Cards_kata;
+
 Console.WriteLine("Hello, World!");
 
 
@@ -52,5 +54,4 @@ Console.WriteLine("Hello, World!");
 // The applciation must convert any valid lists of cards to their score 
 // The application must display an error message if the user enters an invalid list of cards
 
-
-
+CardGame.StartGame();

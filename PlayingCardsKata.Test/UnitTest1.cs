@@ -6,9 +6,7 @@ namespace PlayingCardsKata.Test
     [TestClass]
     public class PlayingCardsKataUnitTests
     {
-        CardGame game = new CardGame();
-        CardValues Cards = new CardValues();
-
+     
 
         //GIVEN I have started the card Game application 
         //WHEN I enter a ‘<listOfCards>’ containing one or two jokers

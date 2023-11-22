@@ -9,6 +9,9 @@ namespace Playing_Cards_kata
     public class CardGame
     {
 
+        public static void StartGame()
+        {
 
+        }
     }
 }
