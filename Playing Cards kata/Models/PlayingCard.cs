@@ -1,35 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Playing_Cards_kata.Models
 {
-    public class CardValues
+    public class PlayingCard
     {
-        public static int One = 1;
-        public static int Two = 2;  
-        public static int Three = 3;
-        public static int Four = 4;
-        public static int Five = 5;
-        public static int Six = 6;
-        public static int Seven = 7;
-        public static int Eight = 8;   
-        public static int Nine = 9;
-            
-            
-        public static int T = 10;
-        public static int J = 11;  
-        public static int Q = 12;
-        public static int K = 13;
-        public static int A = 14;
+        public int CardValue { get; set; }
+        public string CardSuite { get; set; }
+
+
 
         private static int JokerCount;
         public static bool isJokerAccepted()
         {
-            JokerCount ++;
+            JokerCount++;
 
             if (JokerCount >= 3)
                 return false;
@@ -59,7 +46,7 @@ namespace Playing_Cards_kata.Models
                     modifiedCardVal = CardVal;
                     break;
             }
-            return modifiedCardVal;   
+            return modifiedCardVal;
         }
     }
 }

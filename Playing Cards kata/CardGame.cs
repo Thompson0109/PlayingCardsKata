@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Playing_Cards_kata.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +10,7 @@ namespace Playing_Cards_kata
 {
     public class CardGame
     {
-       private static  Dictionary<string, int> CardsInHand = new Dictionary<string, int>();
-
+        public static List<PlayingCard> handOfCards = new List<PlayingCard>();
         public static void StartGame(List<string> ListOfCards)
         {
 
@@ -17,23 +18,27 @@ namespace Playing_Cards_kata
             {
                 ConvertToCardValues(card);
             }
+
+
             Console.WriteLine("BreakPOint");
         }
 
         public static void ConvertToCardValues(string card)
         {
             char[] chars = card.ToCharArray();
+            string SuiteChar = chars[1].ToString();
+            string CardChar = chars[0].ToString();
             int CardVal;
 
             try
             {
-                CardVal = System.Convert.ToInt32(chars[1]);
+                CardVal = System.Convert.ToInt32(CardChar);
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                
-                switch (chars[1].ToString())
+          
+                switch (CardChar)
                 {
                     case "T":
                         CardVal = 10;
@@ -54,10 +59,13 @@ namespace Playing_Cards_kata
                         CardVal = 0;
                         break;
                 }
-                throw;
+                Console.WriteLine("Card Value was 10 or over");
             }
-        
-            CardsInHand.Add(chars[0].ToString(), CardVal);
+            PlayingCard currentCard = new PlayingCard();
+            currentCard.CardSuite = SuiteChar;
+            currentCard.CardValue = CardVal;
+
+            handOfCards.Add(currentCard);
         }
 
     }

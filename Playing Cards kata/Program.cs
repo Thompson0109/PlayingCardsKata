@@ -54,5 +54,4 @@ Console.WriteLine("Hello, World!");
 // The applciation must convert any valid lists of cards to their score 
 // The application must display an error message if the user enters an invalid list of cards
 
-List<string> ListOfCardsTest = new List<string>() { "2C", "2D", "2H", "TC", "KC"};
-CardGame.StartGame(ListOfCardsTest);
+
