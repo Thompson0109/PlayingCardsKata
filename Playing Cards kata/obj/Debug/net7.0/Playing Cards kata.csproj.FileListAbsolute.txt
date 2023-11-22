@@ -1,0 +1,17 @@
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\Playing Cards kata.exe
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\Playing Cards kata.deps.json
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\Playing Cards kata.runtimeconfig.json
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\Playing Cards kata.dll
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\Playing Cards kata.pdb
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\bin\Debug\net7.0\nunit.framework.dll
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.csproj.AssemblyReference.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.AssemblyInfoInputs.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.AssemblyInfo.cs
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.csproj.CoreCompileInputs.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.csproj.CopyComplete
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.dll
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\refint\Playing Cards kata.dll
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.pdb
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\Playing Cards kata.genruntimeconfig.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net7.0\ref\Playing Cards kata.dll

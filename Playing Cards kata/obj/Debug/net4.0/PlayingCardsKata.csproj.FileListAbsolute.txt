@@ -1,0 +1,5 @@
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net4.0\PlayingCardsKata.csproj.AssemblyReference.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net4.0\PlayingCardsKata.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net4.0\PlayingCardsKata.AssemblyInfoInputs.cache
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net4.0\PlayingCardsKata.AssemblyInfo.cs
+C:\Users\louis\Documents\Repos\C# sampes\Playing Cards kata\obj\Debug\net4.0\PlayingCardsKata.csproj.CoreCompileInputs.cache
