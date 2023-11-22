@@ -6,7 +6,7 @@ namespace PlayingCardsKata.Test
     [TestClass]
     public class PlayingCardsKataUnitTests
     {
-     
+       // Note: Using Red Green Refactor Method
 
         //GIVEN I have started the card Game application 
         //WHEN I enter a ‘<listOfCards>’ containing one or two jokers

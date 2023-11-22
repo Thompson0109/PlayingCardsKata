@@ -43,16 +43,16 @@ namespace Playing_Cards_kata.Models
 
             switch (cardSuite)
             {
-                case "clubs":
+                case "c":
                     modifiedCardVal = CardVal * 1;
                     break;
-                case "diamond":
+                case "d":
                     modifiedCardVal = CardVal * 2;
                     break;
-                case "heart":
+                case "h":
                     modifiedCardVal = CardVal * 3;
                     break;
-                case "spade":
+                case "s":
                     modifiedCardVal = CardVal * 4;
                     break;
                 default:
