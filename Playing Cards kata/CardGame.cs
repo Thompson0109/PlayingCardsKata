@@ -1,6 +1,7 @@
 ﻿using Playing_Cards_kata.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security;
 using System.Text;
@@ -11,22 +12,28 @@ namespace Playing_Cards_kata
     public class CardGame
     {
         public static List<PlayingCard> handOfCards = new List<PlayingCard>();
+        public static  List<int> ModifiedCardValues = new List<int>();
+
+        
         public static void StartGame(List<string> ListOfCards)
         {
-
+            int modifiedCardValue;
             foreach (var card in ListOfCards)
             {
                 ConvertToCardValues(card);
             }
 
-
+            foreach (var card in handOfCards)
+            {
+                ModifiedCardValues.Add(PlayingCard.CardSuiteModifier(card));
+            }
             Console.WriteLine("BreakPOint");
         }
 
         public static void ConvertToCardValues(string card)
         {
             char[] chars = card.ToCharArray();
-            string SuiteChar = chars[1].ToString();
+            string SuiteChar = chars[1].ToString().ToLower();
             string CardChar = chars[0].ToString();
             int CardVal;
 

@@ -24,6 +24,21 @@ namespace PlayingCardsKata.Test
         }
 
         [TestMethod]
+        public void AddsSuiteModifier()
+        {
+
+            List<string> ListOfCardsTest = new List<string>() { "2C", "2D", "2H", "TC", "KC" };
+            CardGame.StartGame(ListOfCardsTest);
+
+            Assert.IsNotNull(CardGame.ModifiedCardValues);
+
+            Assert.AreEqual(CardGame.ModifiedCardValues[1], 4);
+            Assert.AreEqual(CardGame.ModifiedCardValues[4], 13);
+
+        }
+
+
+        [TestMethod]
         public void JokersInCardList()
         {
 

@@ -24,26 +24,26 @@ namespace Playing_Cards_kata.Models
                 return true;
         }
 
-        public static int CardSuiteModifier(string cardSuite, int CardVal)
+        public static int CardSuiteModifier(PlayingCard card)
         {
             int modifiedCardVal;
 
-            switch (cardSuite)
+            switch (card.CardSuite)
             {
                 case "c":
-                    modifiedCardVal = CardVal * 1;
+                    modifiedCardVal = card.CardValue * 1;
                     break;
                 case "d":
-                    modifiedCardVal = CardVal * 2;
+                    modifiedCardVal = card.CardValue * 2;
                     break;
                 case "h":
-                    modifiedCardVal = CardVal * 3;
+                    modifiedCardVal = card.CardValue * 3;
                     break;
                 case "s":
-                    modifiedCardVal = CardVal * 4;
+                    modifiedCardVal = card.CardValue * 4;
                     break;
                 default:
-                    modifiedCardVal = CardVal;
+                    modifiedCardVal = card.CardValue;
                     break;
             }
             return modifiedCardVal;
