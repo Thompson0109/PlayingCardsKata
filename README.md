@@ -1,4 +1,7 @@
-© British Telecommunications plc 2021
+Final Results
+![image](https://github.com/Thompson0109/PlayingCardsKata/assets/139117477/412d673e-231b-4ab9-91c5-b652cb18ceee)
+
+
 Card Game Coding Exercise
 Outline
 For this task, you are required to write an application (with C# back-end and user interface of your
