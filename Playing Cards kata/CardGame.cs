@@ -18,29 +18,46 @@ namespace Playing_Cards_kata
         public static void StartGame(List<string> ListOfCards)
         {
             int modifiedCardValue;
+            char[] charrArr;
             foreach (var card in ListOfCards)
             {
-                ConvertToCardValues(card);
+                charrArr = card.ToCharArray();
+                //Checks For invalid Card Entries
+                if(charrArr.Length > 2) { }
+                else
+                {
+                    ConvertToCardValues(card);
+                }
+                
             }
 
             foreach (var card in handOfCards)
             {
-                ModifiedCardValues.Add(PlayingCard.CardSuiteModifier(card));
+                if (card.CardSuite != "k" || card.CardSuite != "d" || card.CardSuite != "c" || card.CardSuite != "s" || card.CardSuite != "jk")
+                {
+                    Console.WriteLine("Invalid Suite Entry: " + card.CardSuite);
+                }
+                else
+                {
+                    ModifiedCardValues.Add(PlayingCard.CardSuiteModifier(card));
+                }
             }
             Console.WriteLine("BreakPOint");
         }
 
         public static void ConvertToCardValues(string card)
         {
+            int CardVal;
             char[] chars = card.ToCharArray();
             string SuiteChar = chars[1].ToString().ToLower();
             string CardChar = chars[0].ToString();
-            int CardVal;
 
             try
             {
+                
                 CardVal = System.Convert.ToInt32(CardChar);
 
+          
             }
             catch (Exception e)
             {
@@ -66,7 +83,7 @@ namespace Playing_Cards_kata
                         CardVal = 0;
                         break;
                 }
-                Console.WriteLine("Card Value was 10 or over");
+                Console.WriteLine("Card Value was 10 or over: " + e);
             }
             PlayingCard currentCard = new PlayingCard();
             currentCard.CardSuite = SuiteChar;
@@ -74,6 +91,7 @@ namespace Playing_Cards_kata
 
             handOfCards.Add(currentCard);
         }
+
 
     }
 }

@@ -63,7 +63,12 @@ namespace PlayingCardsKata.Test
         [TestMethod]
         public void InvalidCardSelectionException()
         {
+            //Numbers with double digits will not work as expected. It will just get the first number that appeats.
+            List<string> ListOfCardsTest = new List<string>() { "17C", "2D", "2H", "20C", "KC", "5Q" };
+            CardGame.StartGame(ListOfCardsTest);
 
+            //Current behaviour removes invalid items from the hand. In this case only 3 are valid. 
+            Assert.IsTrue(CardGame.ModifiedCardValues.Count == 3);
         }
     }
 }

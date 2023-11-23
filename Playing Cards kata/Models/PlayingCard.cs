@@ -42,7 +42,12 @@ namespace Playing_Cards_kata.Models
                 case "s":
                     modifiedCardVal = card.CardValue * 4;
                     break;
+                case "jk":
+                    Console.WriteLine("You recieved a Joker. This will double your overall score.");
+                    modifiedCardVal = card.CardValue;
+                    break;
                 default:
+                    Console.WriteLine($"Invalid Card Suite [{card.CardSuite}]");
                     modifiedCardVal = card.CardValue;
                     break;
             }
