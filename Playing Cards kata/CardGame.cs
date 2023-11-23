@@ -18,14 +18,17 @@ namespace Playing_Cards_kata
         private static bool IsJokerModifierAccepted;
 
 
-        public static void StartGame(List<string> ListOfCards)
+        public static void StartGame(List<string> ListOfCards = null)
         {
+            Console.WriteLine("Welcome to the Card Score Calculator");
+            Console.WriteLine("Insert a Comma Seperate List of the cards in your hand: ");
+            ListOfCards = Console.ReadLine().Split(",").ToList();
            
+            Console.WriteLine(ListOfCards);
             int modifiedCardValue;
             char[] charrArr;
             foreach (var card in ListOfCards)
             {
-               
                 charrArr = card.ToCharArray();
                 //Checks For invalid Card Entries
                 if(charrArr.Length > 2) { }
@@ -42,7 +45,6 @@ namespace Playing_Cards_kata
                         IsJokerModifierAccepted = false;
                         Console.WriteLine("A hand cannot contain more than two Jokers");
                     }
-                
                 }
                 else
                 {
@@ -65,6 +67,7 @@ namespace Playing_Cards_kata
                 }
             }
             FinalScroreSum();
+            Console.ReadLine();
 
         }
 
@@ -125,6 +128,7 @@ namespace Playing_Cards_kata
             }
          
             FinalGameScore = FinalScore;
+            Console.WriteLine($"Your Final Score was: {FinalGameScore.ToString()}");
         }
 
         public static void EndOfRoundCleanUp()

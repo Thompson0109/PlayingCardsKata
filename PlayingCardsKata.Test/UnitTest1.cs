@@ -99,6 +99,7 @@ namespace PlayingCardsKata.Test
             //Current behaviour removes invalid items from the hand. In this case only 3 are valid. 
             Assert.IsTrue(CardGame.ModifiedCardValues.Count == 3);
 
+            //Duplicate Cards Not Implemented
             CardGame.EndOfRoundCleanUpUnitTest();
 
         }

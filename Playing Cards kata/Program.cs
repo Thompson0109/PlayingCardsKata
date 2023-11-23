@@ -55,3 +55,4 @@ Console.WriteLine("Hello, World!");
 // The application must display an error message if the user enters an invalid list of cards
 
 
+CardGame.StartGame();
