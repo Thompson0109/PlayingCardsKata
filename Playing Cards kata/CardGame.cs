@@ -31,7 +31,9 @@ namespace Playing_Cards_kata
             {
                 charrArr = card.ToCharArray();
                 //Checks For invalid Card Entries
-                if(charrArr.Length > 2) { }
+                if(charrArr.Length > 2) {
+                    Console.WriteLine(card.ToString() + " Is not a valid entry");
+                }
                 else if(card.ToLower() == "jk")
                 {
                     bool isJokerAllowed = PlayingCard.isJokerAccepted();
@@ -66,9 +68,16 @@ namespace Playing_Cards_kata
                     Console.WriteLine("Invalid Suite Entry: " + card.CardSuite);
                 }
             }
-            FinalScroreSum();
-            Console.ReadLine();
 
+            FinalScroreSum();
+            Console.WriteLine("Would You like to play again? [Y Or N]: ");
+            
+           string result = Console.ReadLine();
+            if (result.ToLower() == "y")
+            {
+                EndOfRoundCleanUp();
+                StartGame();
+            }
         }
 
         public static void ConvertToCardValues(string card)
@@ -106,7 +115,6 @@ namespace Playing_Cards_kata
                         CardVal = 0;
                         break;
                 }
-                Console.WriteLine("Card Value was 10 or over: " + e);
             }
             PlayingCard currentCard = new PlayingCard();
             currentCard.CardSuite = SuiteChar;

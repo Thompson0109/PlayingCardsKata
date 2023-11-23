@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Playing_Cards_kata;
 
-Console.WriteLine("Hello, World!");
 
 
 //Requirements 
