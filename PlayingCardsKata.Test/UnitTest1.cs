@@ -41,10 +41,27 @@ namespace PlayingCardsKata.Test
         [TestMethod]
         public void JokersInCardList()
         {
+            List<string> ListOfCardsTestOneJoker = new List<string>() { "JK","2C"};
+            List<string> ListOfCardsTestTwoJokers = new List<string>() { "JK", "2C", "Jk", "TC" };
+            List<string> ListOfCardsTestThreeJokers = new List<string> () { "Jk", "TD", "JK", "TH", "Jk" };
 
-           //int TestVal =  CardValues.T + CardValues.J;
-           // Console.WriteLine(TestVal);
-           // Assert.AreEqual(TestVal, 21);
+            Assert.IsNotNull(CardGame.FinalGameScore);
+
+
+            //Test One Joker Modifiers
+            CardGame.StartGame(ListOfCardsTestOneJoker);
+            Assert.AreEqual(CardGame.FinalGameScore, 4);
+            CardGame.EndOfRoundCleanUpUnitTest();
+
+            //Tests Two Joker Modifiers
+            CardGame.StartGame(ListOfCardsTestTwoJokers);
+            Assert.AreEqual(CardGame.FinalGameScore, 48);
+            CardGame.EndOfRoundCleanUpUnitTest();
+
+            //Tests Three Joker Modifiers
+            CardGame.StartGame(ListOfCardsTestThreeJokers);
+            Assert.AreEqual(CardGame.FinalGameScore, 50);
+            CardGame.EndOfRoundCleanUpUnitTest();
         }
 
         //Given I have started the Card Game application
@@ -54,6 +71,18 @@ namespace PlayingCardsKata.Test
         [TestMethod]
         public void CardToScoreConversion()
         {
+            List<string> ListOfCardsTest = new List<string>() { "2C", "2D", "2H", "TC", "KC" };
+            List<string> ListOfCardsTestTwoHundred = new List<string>() { "TC", "TD", "TH", "TS" };
+
+
+            CardGame.StartGame(ListOfCardsTest);
+
+            Assert.IsNotNull(CardGame.FinalGameScore);
+            Assert.AreEqual(CardGame.FinalGameScore, 35);
+
+            CardGame.StartGame(ListOfCardsTestTwoHundred);
+
+            CardGame.EndOfRoundCleanUpUnitTest();
 
         }
 
@@ -63,6 +92,15 @@ namespace PlayingCardsKata.Test
         [TestMethod]
         public void InvalidCardSelectionException()
         {
+            //Numbers with double digits will not work as expected. It will just get the first number that appeats.
+            List<string> ListOfCardsTest = new List<string>() { "17C", "2D", "2H", "20C", "KC", "5Q" };
+            CardGame.StartGame(ListOfCardsTest);
+
+            //Current behaviour removes invalid items from the hand. In this case only 3 are valid. 
+            Assert.IsTrue(CardGame.ModifiedCardValues.Count == 3);
+
+            //Duplicate Cards Not Implemented
+            CardGame.EndOfRoundCleanUpUnitTest();
 
         }
     }

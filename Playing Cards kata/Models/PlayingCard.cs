@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,7 @@ namespace Playing_Cards_kata.Models
         public int CardValue { get; set; }
         public string CardSuite { get; set; }
 
-
-
-        private static int JokerCount;
+        public static int JokerCount;
         public static bool isJokerAccepted()
         {
             JokerCount++;
@@ -43,6 +42,7 @@ namespace Playing_Cards_kata.Models
                     modifiedCardVal = card.CardValue * 4;
                     break;
                 default:
+                    Console.WriteLine($"Invalid Card Suite [{card.CardSuite}]");
                     modifiedCardVal = card.CardValue;
                     break;
             }
